@@ -87,12 +87,6 @@ class Convert:
         except Exception as e:
             pass
 
-        try:
-            Config.check_file_exists(self.coe_file_path)
-            os.system(f'del {self.coe_file_path}')
-        except Exception as e:
-            pass
-
     def run(self):
         self.mips_gcc_c()
         self.mips_objcopy()
@@ -100,6 +94,11 @@ class Convert:
 
     def clean(self):
         self.clean_process_files()
+        try:
+            Config.check_file_exists(self.coe_file_path)
+            os.system(f'del {self.coe_file_path}')
+        except Exception as e:
+            pass
         os.removedirs(self.workspace_name)
 
     def mips_objdump(self):

@@ -72,7 +72,7 @@ class Convert:
         os.system(f'mips-sde-elf-objcopy -O binary {self.o_file_path} {self.bin_file_path}')
 
     def mips_bin2mem(self):
-        os.system(f'{self.config.bin2mem_path} {self.bin_file_path} > {self.coe_file_path}')
+        os.system(f'{self.config.bin2mem_path} {self.bin_file_path} {self.coe_file_path}')
 
     def clean_process_files(self):
         try:

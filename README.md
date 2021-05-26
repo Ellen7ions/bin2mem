@@ -28,10 +28,6 @@ python convert.py your_file_name.s -s
 
 It will save files like *.o
 
-#### 4. bin
-
-You can see the file `Bin2Mem.c`. I set the buffer to 1024. If your program is lager, change it.
-
 ### More ?
 
 Just keep simple for convenience.
